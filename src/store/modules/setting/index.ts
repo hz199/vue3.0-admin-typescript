@@ -9,8 +9,6 @@ import mutations, { SettingMutationTypes } from './mutations'
 
 export { SettingActionTypes, SettingMutationTypes }
 
-export { SettingState }
-
 const authStore: Module<SettingState, RootState> = {
   state: settingState,
   getters,

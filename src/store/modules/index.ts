@@ -1,5 +1,7 @@
-import authStore, { AuthState } from './auth'
-import settingStore, { SettingState } from './setting'
+import authStore from './auth'
+import { AuthState } from './auth/state'
+import settingStore from './setting'
+import { SettingState } from './setting/state'
 
 export type RootState = {
   auth: AuthState

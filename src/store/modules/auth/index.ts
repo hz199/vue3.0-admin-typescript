@@ -9,7 +9,7 @@ import mutations, { AuthMutationTypes } from './mutations'
 
 export { AuthActionTypes, AuthMutationTypes }
 
-export { AuthState }
+// export { AuthState }
 
 const authStore: Module<AuthState, RootState> = {
   state: authState,

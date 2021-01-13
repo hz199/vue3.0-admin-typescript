@@ -8,9 +8,18 @@
   <div class="pull-right header-right">
     <HeaderFullScreen></HeaderFullScreen>
 
-    <el-avatar style="margin-left:20px;">
-      55
-    </el-avatar>
+    
+    <el-dropdown size="small" trigger="click" class="dropdown-height-right">
+      <span class="avatar">
+        <img class="avatar-img" src="../../assets/avatar.gif" alt="">
+      </span>
+      <template #dropdown>
+        <el-dropdown-menu>
+          <el-dropdown-item command="all">个人信息</el-dropdown-item>
+          <el-dropdown-item command="other">登 出</el-dropdown-item>
+        </el-dropdown-menu>
+      </template>
+    </el-dropdown>
   </div>
 </template>
 <script>
@@ -62,4 +71,26 @@ export default defineComponent({
   cursor: pointer;
 }
 
+.avatar {
+  width: 40px;
+  height: 40px;
+  margin-left: 25px;
+  display: inline-block;
+  border: 1px solid #ebeef5;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  .avatar-img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+</style>
+<style lang="scss">
+.header-right .dropdown-height-right {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
 </style>

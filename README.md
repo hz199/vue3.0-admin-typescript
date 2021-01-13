@@ -19,3 +19,13 @@ yarn build
 ```
 yarn lint
 ```
+
+### 开启koa开发模式
+```
+yarn dev
+```
+
+### 上传到腾讯云 云开发CloudBase 我的应用
+```
+yarn deploy:server
+```

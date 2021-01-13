@@ -21,13 +21,13 @@
     <div class="v-nav-bar--right">
       <el-dropdown size="small" trigger="click" @command="handleCommand">
         <el-button type="text" size="mini">操作选项</el-button>
-      <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item command="all">关闭全部</el-dropdown-item>
-          <el-dropdown-item command="other">关闭其他</el-dropdown-item>
-        </el-dropdown-menu>
-      </template>
-    </el-dropdown>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item command="all">关闭全部</el-dropdown-item>
+            <el-dropdown-item command="other">关闭其他</el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
     </div>
   </div>
 </template>
