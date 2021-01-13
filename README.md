@@ -29,3 +29,7 @@ yarn dev
 ```
 yarn deploy:server
 ```
+
+## 云开发 CloudBase
+
+> [开发文档](https://cloudbase.net/)
