@@ -1,0 +1,184 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.layout-drawer .el-drawer__body {
+	height: 100vh;
+}
+
+// 菜单颜色
+.el-menu-vertical-custom {
+	min-height: 100vh;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.el-menu-item:hover {
+	background-color: #409EFF !important;
+}
+
+.el-menu-item.is-active {
+	background-color: #409EFF !important;
+	color: #fff;
+}
+
+.el-submenu__title:hover {
+	background-color:  rgb(81, 90, 110) !important;
+}
+
+.el-popper.is-dark {
+	background-color: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 8px 16px;
+	border-radius: 4px;
+}
