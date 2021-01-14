@@ -33,6 +33,7 @@
     "koa-static-cache": "^5.1.4",
     "koa-views": "^6.2.0",
     "lodash": "^4.17.20",
+    "nprogress": "^0.2.0",
     "pino": "4.16.1",
     "register-service-worker": "1.7.1",
     "screenfull": "^5.1.0",
@@ -41,6 +42,7 @@
     "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
+    "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "2.33.0",
     "@typescript-eslint/parser": "2.33.0",
     "@vue/cli-plugin-babel": "4.5.0",

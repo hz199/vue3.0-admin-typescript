@@ -15,24 +15,24 @@ import { RouteRecordRaw } from 'vue-router'
  */
 
 const routes: Array<RouteRecordRaw> = [
-  // {
-  //   path: '/404',
-  //   name: 'Page404',
-  //   component: () => import('@/views/ErrorPage/404.vue'),
-  //   meta: {
-  //     title: '404',
-  //     isHide: true
-  //   }
-  // },
-  // {
-  //   path: '/403',
-  //   name: 'Page403',
-  //   component: () => import('@/views/ErrorPage/403.vue'),
-  //   meta: {
-  //     title: '403',
-  //     isHide: true
-  //   }
-  // },
+  {
+    path: '/404',
+    name: 'Page404',
+    component: () => import('@/views/ErrorPage/404.vue'),
+    meta: {
+      title: '404',
+      isHide: true
+    }
+  },
+  {
+    path: '/403',
+    name: 'Page403',
+    component: () => import('@/views/ErrorPage/403.vue'),
+    meta: {
+      title: '403',
+      isHide: true
+    }
+  },
   {
     path: '/',
     component: Layout,
