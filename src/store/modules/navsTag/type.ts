@@ -3,7 +3,8 @@ export interface TagItems {
   path: string
   title: string
   flag?: boolean
-  type?: 'primary' | 'default' | ''
+  type?: 'primary' | 'default' | '',
+  ref?: 'currentTagPage' | ''
 }
 
 export interface NavsTagState {
