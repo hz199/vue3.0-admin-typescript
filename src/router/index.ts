@@ -3,6 +3,8 @@ import routes from './config'
 import NProgress from 'nprogress' // Progress 进度条
 import 'nprogress/nprogress.css'// Progress 进度条样式
 
+import $store from '../store'
+
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
@@ -22,8 +24,15 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach(to => {
-  console.log(to, 11)
   document.title = to.meta.title || 'admin'
+
+  if (to.meta.isNavActive) {
+    $store.commit('navsTag/setTagPage', to)
+
+    setTimeout(() => {
+      $store.dispatch('navsTag/setStoreTagpage')
+    }, 0)
+  }
 })
 
 export default router

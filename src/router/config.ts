@@ -51,6 +51,25 @@ const routes: Array<RouteRecordRaw> = [
         }
       }
     ]
+  },
+  {
+    path: '/about',
+    component: Layout,
+    meta: {
+      title: 'about',
+    },
+    children: [
+      {
+        path: '',
+        name: 'About',
+        component: () => import('@/views/About/index.vue'),
+        meta: {
+          title: 'About',
+          isNavActive: true,
+          keepAlive: true
+        }
+      }
+    ]
   }
 ]
 

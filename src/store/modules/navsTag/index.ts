@@ -2,6 +2,8 @@ import { ActionTree, GetterTree, Module, MutationTree } from 'vuex'
 import { RootState } from '../'
 import { NavsTagState, TagItems } from "./type"
 
+import { HOME_PATH } from '@/utils/const'
+
 // 主要是用于顶部导航的操作
 const localStorage = window.localStorage
 const TAG_ITEMS = 'TAG_ITEMS'
@@ -12,19 +14,19 @@ const state: NavsTagState = {
   // 菜单导航
   tagItems: [
     {
-      path: '/',
+      path: HOME_PATH,
       title: '首页',
       flag: true // 是否有删除号，首页默认是没有的
     }
   ],
-  tagPaths: ['/'],
+  tagPaths: [ HOME_PATH ],
   currentRoute: ''
 }
 
 // 获取变量值
 const getters: GetterTree<NavsTagState, RootState> = {
-  gettagItems: state => state.tagItems, // 所有的导航对象
-  gettagPaths: state => state.tagPaths, // 导航的路径
+  getTagItems: state => state.tagItems, // 所有的导航对象
+  getTagPaths: state => state.tagPaths, // 导航的路径
   currentRoute: state => state.currentRoute // 当前的导航
 }
 
@@ -45,26 +47,28 @@ const mutations: MutationTree<NavsTagState> = {
 
   // 删除全部
   deleteAllTag (state) {
-    state.tagItems.splice(1)
-    state.tagItems[0].ref = 'currentTagPage'
-    state.tagItems[0].type = 'primary'
-    state.tagPaths.splice(1)
-    localStorage.setItem(TAG_ITEMS, JSON.stringify(state.tagItems))
-    localStorage.setItem(TAG_PATHS, JSON.stringify(state.tagPaths))
+    if (state.currentRoute !== HOME_PATH) {
+      state.tagItems.splice(1)
+      state.tagItems[0].ref = 'currentTagPage'
+      state.tagItems[0].type = 'primary'
+      state.tagPaths.splice(1)
+      localStorage.setItem(TAG_ITEMS, JSON.stringify(state.tagItems))
+      localStorage.setItem(TAG_PATHS, JSON.stringify(state.tagPaths))
+    }
   },
 
   // 删除其他
   deleteOthersTag (state) {
     // 过滤掉当前的导航对象，生成新的对象
     state.tagItems = state.tagItems.filter(item => {
-      return item.ref === 'currentTagPage' || item.path === '/'
+      return item.ref === 'currentTagPage' || item.path === HOME_PATH
     })
 
     // 过滤掉当前路径，并形成新的导航 路径数组
     state.tagItems.forEach(oItem => {
       if (oItem.ref === 'currentTagPage') {
         state.tagPaths = state.tagPaths.filter(item => {
-          return item === oItem.path || item === '/'
+          return item === oItem.path || item === HOME_PATH
         })
       }
     })
@@ -78,7 +82,6 @@ const mutations: MutationTree<NavsTagState> = {
    * @param {*} state
    * @param {*} payload
    */
-  // 左边导航点击触发 右边的导航路径更新
   setTagPage (state, payload) {
     // 当前路由
     const currentRoute = {
@@ -88,8 +91,8 @@ const mutations: MutationTree<NavsTagState> = {
     const tagItems = JSON.parse(localStorage.getItem(TAG_ITEMS)!)
     const tagPaths = JSON.parse(localStorage.getItem(TAG_PATHS)!)
 
-    let initTagPage: TagItems[] = tagItems || [{ path: '/', title: '首页', flag: true }]
-    const inittagPaths = tagPaths || ['/']
+    let initTagPage: TagItems[] = tagItems || [{ path: HOME_PATH, title: '首页', flag: true }]
+    const inittagPaths = tagPaths || [HOME_PATH]
 
     if (inittagPaths.indexOf(payload.path) < 0) {
       initTagPage.push(currentRoute)
@@ -135,7 +138,8 @@ const navsTagStore: Module<NavsTagState, RootState> = {
   state,
   getters,
   mutations,
-  actions
+  actions,
+  namespaced: true
 }
 
 export default navsTagStore

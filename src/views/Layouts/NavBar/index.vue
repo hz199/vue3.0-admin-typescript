@@ -8,11 +8,11 @@
           <div class="v-nav-bar__nav" :style="navStyle" ref="nav">
             <div
               class="v-nav-bar__nav-item"
-              v-for="item in 100"
-              :key="item"
-              :class="{'is-active': item === 99}"
+              v-for="item in vuexTagItems"
+              :key="item.path"
+              :class="{'is-active': item.type === 'primary'}"
             >
-              <Tag :text="`标签${item}`" closable/>
+              <Tag :text="`${item.title}`" :type="item.type" :closable="!item.flag"/>
             </div>
           </div>
         </div>
@@ -33,7 +33,9 @@
 </template>
 <script lang="ts">
 import { defineComponent, computed, ref } from 'vue'
+import { mapGetters, mapMutations } from 'vuex'
 import Tag from './Tag.vue'
+import { HOME_PATH } from '@/utils/const'
 
 export default defineComponent({
   name: 'VNavBar',
@@ -51,7 +53,17 @@ export default defineComponent({
       navStyle
     }
   },
+  computed: {
+    ...mapGetters({
+      vuexTagItems: 'navsTag/getTagItems',
+      vuexCurrentRoute: 'navsTag/currentRoute'
+    })
+  },
   methods: {
+    ...mapMutations('navsTag', [
+      'deleteOthersTag',
+      'deleteAllTag'
+    ]),
     scrollPrev() {
       const navScrollDom = this.$refs.navScroll as HTMLDivElement
 
@@ -99,14 +111,33 @@ export default defineComponent({
       this.navOffset = Math.min(newOffset, maxOffset)
     },
     handleCommand (command: string) {
-      console.log(command)
+      switch (command) {
+        case 'all':
+          if (this.vuexCurrentRoute !== HOME_PATH) {
+            this.$router.push({path: HOME_PATH})
+          }
+          
+          this.deleteAllTag()
+          break
+        case 'other':
+          this.deleteOthersTag()
+          break
+      }
     }
   },
-  mounted () {
-    setTimeout(() => {
-      this.scrollToActiveTab()
-    }, 3000)
+  watch: {
+    vuexTagItems: {
+      deep: true,
+      handler () {
+        this.scrollToActiveTab()
+      }
+    }
   }
+  // mounted () {
+  //   setTimeout(() => {
+  //     this.scrollToActiveTab()
+  //   }, 3000)
+  // }
 })
 </script>
 <style lang="scss" scoped>

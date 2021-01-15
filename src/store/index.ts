@@ -5,7 +5,7 @@ import modules, { RootState } from './modules'
 const debug = process.env.NODE_ENV !== 'production'
 const plugins = debug ? [
   createLogger({
-    collapsed: false,
+    collapsed: true,
     // filter(mutation) {
     //   console.log(mutation, 11155)
     //   return true
