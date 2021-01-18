@@ -8,7 +8,6 @@ declare module '@vue/runtime-core' {
 }
 
 import { createApp } from 'vue'
-import './registerServiceWorker'
 import router from './router'
 import store, { storeKey } from './store'
 import installElementPlus from './element'
@@ -19,6 +18,8 @@ import App from './App.vue'
 const app = createApp(App)
 
 installElementPlus(app)
+
+import './registerServiceWorker'
 
 app
   .use(store, storeKey)

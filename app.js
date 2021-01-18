@@ -4,9 +4,9 @@ const logger = require('koa-logger')
 const json = require('koa-json')
 const bodyParser = require('koa-bodyparser')
 const session = require('koa-session')
-// const staticService = require('koa-static')
+const staticService = require('koa-static')
 const config = require('config')
-const staticServiceCache = require('koa-static-cache')
+// const staticServiceCache = require('koa-static-cache')
 const router = require('./routes')
 const errorHandler = require('./middlewares/errorHandler')
 
@@ -18,11 +18,8 @@ if (env === 'development' && config.get('app.debug')) {
   app.use(logger())
 }
 
-app.use(staticServiceCache(path.join(__dirname, './dist'), {
-  maxAge: 7 * 24 * 60 * 60
-}))
-
-// app.use(staticService(path.resolve(__dirname, './dist')))
+// 静态文件处理
+app.use(staticService(path.resolve(__dirname, './dist')))
 
 app.use(json())
 

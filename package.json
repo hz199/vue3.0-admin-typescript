@@ -35,7 +35,7 @@
     "lodash": "^4.17.20",
     "nprogress": "^0.2.0",
     "pino": "4.16.1",
-    "register-service-worker": "1.7.1",
+    "register-service-worker": "^1.7.2",
     "screenfull": "^5.1.0",
     "vue": "3.0.0",
     "vue-router": "^4.0.2",
