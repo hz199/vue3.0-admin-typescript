@@ -19,7 +19,7 @@ const app = createApp(App)
 
 installElementPlus(app)
 
-import './registerServiceWorker'
+// import './registerServiceWorker'
 
 app
   .use(store, storeKey)

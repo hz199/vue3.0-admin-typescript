@@ -21,7 +21,6 @@
       <el-header class="header clearfix">
         <HeaderContent></HeaderContent>
       </el-header>
-      <!-- <div>11</div> -->
       <NavBar></NavBar>
 
       <el-main style="padding:0;">
