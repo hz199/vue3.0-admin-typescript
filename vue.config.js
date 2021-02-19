@@ -19,14 +19,7 @@ module.exports = {
     config
       .resolve.alias
       .set('@', path.resolve(__dirname, './src'))
-
-    // config
-    //   .entry('main')
-    //   .add(path.resolve(__dirname, './src/main.ts'))
-    //   .end()
-
   },
-  // 代码gzip压缩
   configureWebpack: () => {
   }
 }

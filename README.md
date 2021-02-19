@@ -1,4 +1,4 @@
-# koa vue 腾讯云项目
+# vue 
 
 ## Project setup
 ```
@@ -24,12 +24,3 @@ yarn lint
 ```
 yarn dev
 ```
-
-### 上传到腾讯云 云开发CloudBase 我的应用
-```
-yarn deploy:server
-```
-
-## 云开发 CloudBase
-
-> [开发文档](https://cloudbase.net/)
