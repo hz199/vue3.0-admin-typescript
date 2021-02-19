@@ -20,7 +20,6 @@ yarn build
 yarn lint
 ```
 
-### 开启koa开发模式
-```
-yarn dev
-```
+### 开启koa开发模式 
+
+[分支](https://github.com/hz199/vue3.0-admin-typescript/tree/feature/serverless)
