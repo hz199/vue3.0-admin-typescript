@@ -18,21 +18,25 @@
     </el-aside>
 
     <el-container class="right-container">
-      <el-header class="header clearfix">
+      <el-header class="header clearfix" style="box-shadow: 0 4px 10px 0 rgba(44, 51, 73, 0.1);">
         <HeaderContent></HeaderContent>
       </el-header>
       <!-- <div>11</div> -->
       <NavBar></NavBar>
 
-      <el-main style="padding:0;">
-        <!-- <el-scrollbar class="scrollbar" :native="false" :noresize="true"> -->
+      <el-main style="padding:8px 0 8px 16px; background-color:#EDF1F7;">
+        <el-scrollbar class="scrollbar" :native="false" :noresize="true">
           <router-view v-slot="{ Component }">
             <transition name="fadeTran" appear>
               <component :is="Component" />
             </transition>
           </router-view>
-        <!-- </el-scrollbar> -->
+        </el-scrollbar>
+
       </el-main>
+      <el-footer style="border-top: 1px solid #ebeef5;text-align: center;line-height:60px;font-size:14px;color:#999;">
+        vue-admin
+      </el-footer>
     </el-container>
   </el-container>
 </template>
@@ -96,7 +100,7 @@ export default defineComponent({
   .aside {
     height: 100vh;
     overflow-y: auto;
-    background: rgb(81, 90, 110);
+    // background: rgb(81, 90, 110);
   }
   .right-container {
     max-height: 100vh;

@@ -6,9 +6,6 @@
       @open="handleOpen"
       @close="handleClose"
       :collapse="isCollapse"
-      text-color="rgba(255, 255, 255, 0.7)"
-      background-color="rgb(81, 90, 110)"
-      active-text-color="rgba(255, 255, 255, 1)"
     >
       <li class="logo">
         <img class="logo-img" src="@/assets/logo.png" width="46" alt="">
@@ -108,4 +105,31 @@ export default defineComponent({
     display: inline-block;
   }
 }
+
+
+// 菜单颜色
+// .el-menu-vertical-custom {
+// 	min-height: 100vh;
+// 	background-color: rgba(0, 0, 0, 0);
+// }
+
+// .el-menu-item:hover {
+// 	background-color: #409EFF !important;
+// }
+
+// .el-menu-item.is-active {
+// 	background-color: #409EFF !important;
+// 	color: #fff;
+// }
+
+// .el-submenu__title:hover {
+// 	background-color:  rgb(81, 90, 110) !important;
+// }
+
+// .el-popper.is-dark {
+// 	background-color: rgba(0, 0, 0, 0.6);
+// 	color: #fff;
+// 	padding: 8px 16px;
+// 	border-radius: 4px;
+// }
 </style>
