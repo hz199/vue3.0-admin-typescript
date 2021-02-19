@@ -24,8 +24,8 @@
       <!-- <div>11</div> -->
       <NavBar></NavBar>
 
-      <el-main style="padding:8px 0 8px 16px; background-color:#EDF1F7;">
-        <el-scrollbar class="scrollbar" :native="false" :noresize="true">
+      <el-main style="padding:0;background-color:#EDF1F7;">
+        <el-scrollbar class="scrollbar-layout-main" :native="false" :noresize="true">
           <router-view v-slot="{ Component }">
             <transition name="fadeTran" appear>
               <component :is="Component" />
@@ -124,5 +124,10 @@ export default defineComponent({
     opacity: 1;
     transform: translateX(0);
   }
+}
+</style>
+<style>
+.scrollbar-layout-main .el-scrollbar__view {
+  padding: 16px;
 }
 </style>

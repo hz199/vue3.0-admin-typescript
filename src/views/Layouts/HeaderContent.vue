@@ -8,11 +8,11 @@
   <div class="pull-right header-right">
     <HeaderFullScreen></HeaderFullScreen>
 
-    
     <el-dropdown size="small" trigger="click" class="dropdown-height-right">
       <span class="avatar">
         <img class="avatar-img" src="../../assets/avatar.gif" alt="">
       </span>
+      <span style="dsiplay:inline-block;margin-left:10px;">admin</span>
       <template #dropdown>
         <el-dropdown-menu>
           <el-dropdown-item command="all">个人信息</el-dropdown-item>
