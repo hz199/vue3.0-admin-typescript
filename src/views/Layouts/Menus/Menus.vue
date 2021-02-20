@@ -3,48 +3,35 @@
     <el-menu
       default-active="1-4-1"
       class="el-menu-vertical-custom"
-      @open="handleOpen"
-      @close="handleClose"
+      @select="handleSelect"
       :collapse="isCollapse"
     >
       <li class="logo">
         <img class="logo-img" src="@/assets/logo.png" width="46" alt="">
       </li>
-      <el-submenu index="1">
-        <template #title>
-          <i class="el-icon-location"></i>
-          <span>导航一</span>
-        </template>
-        <el-menu-item-group>
-          <template #title>分组一</template>
-          <el-menu-item index="1-1">选项1</el-menu-item>
-          <el-menu-item index="1-2">选项2</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="分组2">
-          <el-menu-item index="1-3">选项3</el-menu-item>
-        </el-menu-item-group>
-        <el-submenu index="1-4">
-          <template #title>选项4</template>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
-      </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"></i>
-        <template #title>导航二</template>
-      </el-menu-item>
-      <el-menu-item index="3">
-        <i class="el-icon-document"></i>
-        <template #title>导航三</template>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
-        <template #title>导航四</template>
-      </el-menu-item>
 
-      <el-menu-item :index="k+ 100+''" v-for="k in 5" :key="k">
-        <i class="el-icon-setting"></i>
-        <template #title>导航{{k + 100}}</template>
-      </el-menu-item>
+      <template v-for="(aItem) in menuList" :key="aItem.title">
+        <el-submenu :index="aItem.title" v-if="aItem.SubMenu && aItem.SubMenu.length > 0">
+          <template #title>
+            <i :class="aItem.icon"></i>
+            <span>{{aItem.title}}</span>
+          </template>
+          <!-- 子组件循环 -->
+          <template v-for="cItem in aItem.SubMenu" :key="cItem.path">
+            <el-menu-item :index="cItem.path">
+              <i :class="cItem.icon"></i>
+              <template #title>{{cItem.title}}</template>
+            </el-menu-item>
+          </template>
+          
+        </el-submenu>
+        <!-- 无子菜单 -->
+        <el-menu-item v-else :index="aItem.path">
+          <i :class="aItem.icon"></i>
+          <template #title>{{aItem.title}}</template>
+        </el-menu-item>
+      </template>
+
     </el-menu>
   </el-scrollbar>
 </template>
@@ -52,26 +39,22 @@
 <script>
 import { defineComponent } from 'vue'
 import { mapGetters } from 'vuex'
-// import { useStore } from '@/store'
+import menuList from './config'
 
 export default defineComponent({
   setup () {
-    // const store = useStore()
-
     return {
     }
   },
   methods: {
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose(key, keyPath) {
+    handleSelect(key, keyPath) {
       console.log(key, keyPath)
     }
   },
   data () {
     return {
-      isCollapse: false
+      isCollapse: false,
+      menuList
     }
   },
   computed: {
@@ -93,7 +76,7 @@ export default defineComponent({
 </script>
 <style lang="scss">
 .el-menu-vertical-custom:not(.el-menu--collapse) {
-  width: 200px;
+  width: 230px;
   /* min-height: 400px; */
 }
 .logo {
@@ -126,10 +109,10 @@ export default defineComponent({
 // 	background-color:  rgb(81, 90, 110) !important;
 // }
 
-// .el-popper.is-dark {
-// 	background-color: rgba(0, 0, 0, 0.6);
-// 	color: #fff;
-// 	padding: 8px 16px;
-// 	border-radius: 4px;
-// }
+.el-popper.is-dark {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	padding: 8px 16px;
+	border-radius: 4px;
+}
 </style>

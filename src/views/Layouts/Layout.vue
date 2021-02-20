@@ -6,7 +6,7 @@
       <el-drawer
         v-if="getIsPhoneStatus"
         custom-class="layout-drawer"
-        size="200"
+        size="230"
         v-model="drawerStatus"
         @close="handleDeawerClose"
         direction="ltr"

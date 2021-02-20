@@ -57,6 +57,8 @@ export default defineComponent({
 </script>
 <style lang="scss">
 $tag-size: 28px;
+@import '../../../element-variables';
+
 // tag
 .nav-tag {
   // box-sizing: border-box;
@@ -107,7 +109,7 @@ $tag-size: 28px;
   }
   &__close-wrapper:hover{
     transform: scale(1.1);
-    color: #2d8cf0;
+    color: $--color-primary;
   }
 
   &__dot--default {
@@ -115,7 +117,7 @@ $tag-size: 28px;
   }
 
   &__dot--primary {
-    background: #2d8cf0;
+    background: $--color-primary;
   }
 }
 </style>
