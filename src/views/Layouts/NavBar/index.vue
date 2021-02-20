@@ -12,7 +12,7 @@
               :key="item.path"
               :class="{'is-active': item.type === 'primary'}"
             >
-              <Tag :text="`${item.title}`" :type="item.type" :closable="!item.flag"/>
+              <Tag :text="`${item.title}`" :routerPath="item.path" :onTap="handleTap" :type="item.type" :closable="!item.flag"/>
             </div>
           </div>
         </div>
@@ -123,6 +123,12 @@ export default defineComponent({
           this.deleteOthersTag()
           break
       }
+    },
+    handleTap (path: string) {
+
+      this.$router.push({
+        path
+      })
     }
   },
   watch: {

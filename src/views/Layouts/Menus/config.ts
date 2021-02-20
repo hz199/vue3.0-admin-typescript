@@ -22,7 +22,7 @@ const menus: Array<MenusConfig> = [
       },
       {
         icon: 'el-icon-s-order',
-        path: '/tables/importTable',
+        path: '/tables/table2',
         title: '导入Excel'
       }
     ]
@@ -33,16 +33,16 @@ const menus: Array<MenusConfig> = [
     SubMenu: [
       {
         icon: 'el-icon-s-ticket',
-        path: '/components/loadingBar',
-        title: 'LoadingBar'
-      },
-      {
-        icon: 'el-icon-s-ticket',
-        path: '/components/dragAblePage',
-        title: '简易拖拽'
+        path: '/comps/comp1',
+        title: '组件1'
       }
     ]
-  }
+  },
+  {
+    icon: 'el-icon-s-home',
+    title: '关于',
+    path: '/about'
+  },
 ]
 
 export default menus

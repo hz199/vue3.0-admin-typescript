@@ -34,7 +34,7 @@ export default defineComponent({
       <div
         class="nav-tag"
         onClick={() => {
-          this.onTap && this.onTap(this.routerPath, this.type)
+          this.onTap && this.onTap(this.routerPath)
         }}
       >
         <span

@@ -14,7 +14,9 @@ import {
   ElDrawer,
   ElDropdown,
   ElDropdownMenu,
-  ElDropdownItem
+  ElDropdownItem,
+  ElBreadcrumb,
+  ElBreadcrumbItem
 } from 'element-plus'
 import lang from 'element-plus/lib/locale/lang/zh-cn'
 import locale from 'element-plus/lib/locale'
@@ -36,7 +38,9 @@ const elements = [
   ElDrawer,
   ElDropdown,
   ElDropdownMenu,
-  ElDropdownItem
+  ElDropdownItem,
+  ElBreadcrumb,
+  ElBreadcrumbItem
 ]
 
 export default (app: App) => {

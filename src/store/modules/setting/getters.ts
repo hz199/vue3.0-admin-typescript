@@ -9,7 +9,8 @@ import { RootState } from '../'
 
 const getters: GetterTree<SettingState, RootState> = {
   getSliderCollapse: state => state.sliderCollapse,
-  getIsPhoneStatus: state => state.isPhone
+  getIsPhoneStatus: state => state.isPhone,
+  getBreadcrumbs: state => state.breadcrumbs
 }
 
 export default getters

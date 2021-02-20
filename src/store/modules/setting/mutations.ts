@@ -1,9 +1,10 @@
 import { MutationTree } from 'vuex'
-import { SettingState } from './state'
+import { Breadcrumb, SettingState } from './state'
 
 export enum SettingMutationTypes {
   SET_SLIDER_COLLAPSE = 'SETTING/SET_SLIDER_COLLAPSE',
-  SET_IS_PHONE = 'SETTING/SET_IS_PHONE'
+  SET_IS_PHONE = 'SETTING/SET_IS_PHONE',
+  SET_BREADCRUMB = 'SETTING/SET_BREADCRUMB'
 }
 
 export type Mutations<S = SettingState> = {
@@ -19,6 +20,11 @@ const mutations: MutationTree<SettingState> & Mutations = {
   // 是否是手机状态
   [SettingMutationTypes.SET_IS_PHONE](state: SettingState, payload: boolean) {
     state.isPhone = payload
+  },
+
+  // 设置面包屑
+  [SettingMutationTypes.SET_BREADCRUMB](state: SettingState, payload: Breadcrumb[]) {
+    state.breadcrumbs = payload
   }
 }
 

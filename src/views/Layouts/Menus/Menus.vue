@@ -1,7 +1,7 @@
 <template>
   <el-scrollbar class="scrollbar" :native="false" noresize>
     <el-menu
-      default-active="1-4-1"
+      :default-active="currentRoute"
       class="el-menu-vertical-custom"
       @select="handleSelect"
       :collapse="isCollapse"
@@ -47,8 +47,12 @@ export default defineComponent({
     }
   },
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath)
+    handleSelect(key) {
+      // console.log(key, keyPath)
+
+      this.$router.push({
+        path: key
+      })
     }
   },
   data () {
@@ -61,6 +65,9 @@ export default defineComponent({
     ...mapGetters([
       'getSliderCollapse',
       'getIsPhoneStatus'
+    ]),
+    ...mapGetters('navsTag', [
+      'currentRoute'
     ])
   },
   watch: {
@@ -77,6 +84,7 @@ export default defineComponent({
 <style lang="scss">
 .el-menu-vertical-custom:not(.el-menu--collapse) {
   width: 230px;
+  border: none;
   /* min-height: 400px; */
 }
 .logo {
@@ -90,24 +98,34 @@ export default defineComponent({
 }
 
 
-// 菜单颜色
-// .el-menu-vertical-custom {
-// 	min-height: 100vh;
-// 	background-color: rgba(0, 0, 0, 0);
-// }
+$menu-hover-color: #40a0ff7e;
+$menu-font-color: rgb(224, 221, 221);
 
-// .el-menu-item:hover {
-// 	background-color: #409EFF !important;
-// }
+[theme="dark"] {
+  .el-aside, .el-menu {
+    background-color: rgb(81, 90, 110);
+  }
+  .el-menu-item , .el-submenu__title{
+    color: $menu-font-color;
+  }
 
-// .el-menu-item.is-active {
-// 	background-color: #409EFF !important;
-// 	color: #fff;
-// }
+  .el-menu-item.is-active {
+    color: $menu-font-color;
+    background-color: $menu-hover-color;
+  }
+  .el-menu-item:focus, .el-menu-item:hover {
+    outline: 0;
+    background-color: $menu-hover-color;
+  }
+  .el-submenu__title:hover {
+    background-color: $menu-hover-color;
+  }
 
-// .el-submenu__title:hover {
-// 	background-color:  rgb(81, 90, 110) !important;
-// }
+  .el-submenu__title:focus, .el-submenu__title:hover {
+    outline: 0;
+    background-color: $menu-hover-color;
+  }
+}
 
 .el-popper.is-dark {
 	background-color: rgba(0, 0, 0, 0.8);

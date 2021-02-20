@@ -57,6 +57,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Layout,
     meta: {
       title: 'about',
+      isHideBreadcrumb: true
     },
     children: [
       {
@@ -69,6 +70,59 @@ const routes: Array<RouteRecordRaw> = [
           keepAlive: true
         }
       }
+    ]
+  },
+  {
+    path: '/tables',
+    component: Layout,
+    redirect: '/tables/table1',
+    meta: {
+      title: '表格',
+      icon: 'el-icon-film'
+    },
+    children: [
+      {
+        path: 'table1',
+        name: 'Table1',
+        component: () => import('@/views/Tables/Table1.vue'),
+        meta: {
+          title: '导出Excel',
+          isNavActive: true,
+          keepAlive: true,
+          icon: 'el-icon-film'
+        }
+      },
+      {
+        path: 'table2',
+        name: 'Table2',
+        component: () => import('@/views/Tables/Table2.vue'),
+        meta: {
+          title: '导入Excel',
+          isNavActive: true,
+          keepAlive: true,
+          icon: 'el-icon-film'
+        }
+      }
+    ]
+  },
+  {
+    path: '/comps',
+    component: Layout,
+    redirect: '/comps/comp1',
+    meta: {
+      title: '组件',
+    },
+    children: [
+      {
+        path: 'comp1',
+        name: 'Comp1',
+        component: () => import('@/views/Comps/index.vue'),
+        meta: {
+          title: '组件1',
+          isNavActive: true,
+          keepAlive: true
+        }
+      },
     ]
   }
 ]

@@ -4,6 +4,7 @@
       <i class="el-icon-s-unfold" @click="handleSliderCollapse" v-if="getSliderCollapse"></i>
       <i class="el-icon-s-fold" @click="handleSliderCollapse" v-else></i>
     </div>
+    <Breadcrumb></Breadcrumb>
   </div>
   <div class="pull-right header-right">
     <HeaderFullScreen></HeaderFullScreen>
@@ -28,11 +29,13 @@ import { useStore } from '@/store'
 import HeaderFullScreen from './components/HeaderFullScreen'
 import { mapGetters } from 'vuex'
 import { SettingMutationTypes } from '@/store/modules/setting'
+import Breadcrumb from './Breadcrumb'
 
 export default defineComponent({
   name: 'Header',
   components: {
-    HeaderFullScreen
+    HeaderFullScreen,
+    Breadcrumb
   },
   setup () {
     const store = useStore()
