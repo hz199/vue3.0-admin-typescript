@@ -1,14 +1,17 @@
 import { App } from 'vue'
 import HCountup from './HCountup/index.vue'
 
-const components = [
+const components = {
   HCountup
-]
+} as {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any
+}
 
 export default {
   install: (app: App) => {
-    components.forEach(comp => {
-      app.component(comp.name, comp)
-    })
+    for (const key in components) {
+      app.component(key, components[key])
+    }
   }
 }

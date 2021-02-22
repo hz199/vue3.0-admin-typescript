@@ -17,7 +17,9 @@ import {
   ElDropdownItem,
   ElBreadcrumb,
   ElBreadcrumbItem,
-  ElCard
+  ElCard,
+  ElRow,
+  ElCol
 } from 'element-plus'
 import lang from 'element-plus/lib/locale/lang/zh-cn'
 import locale from 'element-plus/lib/locale'
@@ -42,12 +44,16 @@ const elements = [
   ElDropdownItem,
   ElBreadcrumb,
   ElBreadcrumbItem,
-  ElCard
+  ElCard,
+  // ElRow, // 这两个报错
+  // ElCol
 ]
 
 export default {
   install: (app: App) => {
     locale.use(lang)
+    app.component(ElRow.name, ElRow)
+    app.component(ElCol.name, ElCol)
     
     elements.forEach(comp => {
       app.use(comp)
