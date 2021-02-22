@@ -1,10 +1,14 @@
 <template>
-  <div class="home">
-    <!-- <el-button type="primary" @click="setUserInfo">点击</el-button>
-    <el-button type="primary" @click="fetchUserInfo">点击fetchUserInfo</el-button> -->
+  <el-card shadow="never">
+    <template #header>
+      <span>卡片名称</span>
+    </template>
+    <!-- <div v-for="o in 4" :key="o" class="text item">
+      {{'列表内容 ' + o }}
+    </div> -->
+    <HCountup :value='11111'></HCountup>
 
-    首页
-  </div>
+  </el-card>
 </template>
 
 <script lang="ts">
