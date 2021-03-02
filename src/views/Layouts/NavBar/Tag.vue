@@ -57,7 +57,7 @@ export default defineComponent({
 </script>
 <style lang="scss">
 $tag-size: 28px;
-@import '../../../element-variables';
+@import '../../../vars';
 
 // tag
 .nav-tag {
@@ -66,7 +66,7 @@ $tag-size: 28px;
   height: $tag-size;
   line-height: $tag-size;
   padding: 0 8px;
-  border: 1px solid #e8eaec;
+  border: $h--border-width solid #e8eaec;
   border-radius: 3px;
   font-size: 12px;
   vertical-align: middle;

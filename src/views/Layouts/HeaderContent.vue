@@ -63,6 +63,8 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
+@import '@/vars.scss';
+
 .header-right, .header-left {
   height: 100%;
   display: flex;
@@ -79,7 +81,7 @@ export default defineComponent({
   height: 40px;
   margin-left: 25px;
   display: inline-block;
-  border: 1px solid #ebeef5;
+  border: $h--border-width solid #ebeef5;
   text-align: center;
   cursor: pointer;
   border-radius: 20px;

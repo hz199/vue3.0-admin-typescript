@@ -13,7 +13,7 @@ import store, { storeKey } from './store'
 import installElementPlus from './element'
 import Components from './components'
 import './app.scss'
-import './element-variables.scss'
+import './vars.scss'
 import App from './App.vue'
 
 const app = createApp(App)

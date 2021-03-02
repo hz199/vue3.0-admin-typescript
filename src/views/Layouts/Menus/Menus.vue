@@ -133,4 +133,14 @@ $menu-font-color: rgb(224, 221, 221);
 	padding: 8px 16px;
 	border-radius: 4px;
 }
+
+// 菜单
+.el-menu-vertical-custom .el-menu-item {
+  position: relative;
+}
+.el-menu-vertical-custom .el-menu-item.is-active {
+  // background-color: rosybrown;
+  border-right: 4px solid $menu-hover-color;
+  border-radius: 0 3px 3px 0;
+}
 </style>

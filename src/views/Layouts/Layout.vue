@@ -24,7 +24,7 @@
       <!-- <div>11</div> -->
       <NavBar></NavBar>
 
-      <el-main style="padding:0;background-color:#EDF1F7;">
+      <el-main style="padding:0;background-color:#fafafc;">
         <el-scrollbar class="scrollbar-layout-main" :native="false" :noresize="true">
           <router-view v-slot="{ Component }">
             <transition name="fadeTran" appear>
@@ -34,7 +34,7 @@
         </el-scrollbar>
 
       </el-main>
-      <el-footer style="border-top: 1px solid #ebeef5;text-align: center;line-height:60px;font-size:14px;color:#999;">
+      <el-footer class="footer">
         vue-admin
       </el-footer>
     </el-container>
@@ -96,10 +96,20 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
+@import '@/vars.scss';
+
 .layout {
+  .footer {
+    border-top: $h--border-width solid #e4e9f2;
+    text-align: center;
+    line-height:60px;
+    font-size:14px;
+    color:#999;
+  }
   .aside {
     height: 100vh;
     overflow-y: auto;
+    border-right: $h--border-width solid #e4e9f2;
     // background: rgb(81, 90, 110);
   }
   .right-container {
@@ -108,11 +118,11 @@ export default defineComponent({
   }
   .header {
     line-height: 60px;
-    border-bottom: 1px solid #ebeef5;
+    border-bottom: $h--border-width solid #ebeef5;
   }
 }
 .fadeTran-enter-active {
-  animation: bounce-in 0.3s ease-in-out both;
+  animation: bounce-in 0.6s ease-in-out both;
 }
 
 @keyframes bounce-in {

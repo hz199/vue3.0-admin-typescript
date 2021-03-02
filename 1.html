@@ -1,0 +1,253 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style>
+    body,
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    form,
+    p,
+    blockquote,
+    th,
+    td {
+      margin: 0;
+      padding: 0;
+      font: 宋体;
+      font-size: 12px;
+    }
+
+    ol,
+    ul {
+      list-style: none outside none;
+    }
+
+    /*link*/
+    a {
+      color: #106aa9;
+      text-decoration: none;
+    }
+
+    /*content nav one*/
+    .navC {
+      border-bottom: 1px solid #cce2ed;
+    }
+
+    .navC li {
+      border-left: 1px solid #cce2ed;
+      border-right: 1px solid #cce2ed;
+    }
+
+    .navC li a {
+      border-top: 1px solid #cce2ed;
+      background: #f1f6fa;
+      font-size: 14px;
+    }
+
+    .navC li a:hover {
+      background: #ffffff;
+      text-decoration: none;
+    }
+
+    .navC .current,
+    .navC li:hover {
+      border-left: 1px solid #cce2ed;
+      border-right: 1px solid #cce2ed;
+    }
+
+    .navC li:hover a {
+      border-top: 1px solid #cce2ed;
+    }
+
+    .navC .current a,
+    .navC .current a:hover {
+      background: #ffffff;
+      border-bottom: 1px solid #ffffff;
+      color: #333333;
+      border-top: 1px solid #cce2ed;
+    }
+
+    .navC .current a {
+      font-weight: 700;
+    }
+
+    .navC {
+      height: 28px;
+      line-height: 28px;
+    }
+
+    .navC ul {
+      padding-left: 10px;
+      float: left;
+      margin-bottom: -1px;
+    }
+
+    /*ie6*/
+    .navC li {
+      float: left;
+      margin-right: 5px;
+    }
+
+    .navC li a {
+      float: left;
+      display: block;
+      padding: 0 15px;
+      height: 28px;
+      overflow: hidden;
+      margin-top: -1px;
+      _position: relative;
+    }
+
+    .mb10 {
+      margin: 10px;
+    }
+
+    .mb20 {
+      margin: 20px;
+    }
+
+    .pd10 {
+      padding: 10px;
+    }
+
+    /*table*/
+    .tdtable {
+      border: 0px;
+      cellspacing: 0;
+      cellpadding: 0;
+      align: center;
+      width: 98%;
+      border-collapse: collapse;
+    }
+
+    .tdtable th,
+    tr {
+      height: 40px;
+    }
+
+    .tdtable th {
+      background: #cce2ed;
+      padding: 10px;
+      padding: 4px;
+      border: solid 1px #fff;
+    }
+
+    .tdtable td {
+      border: solid 1px #cce2ed;
+      padding: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mainContainer">
+    <div id="navContainer" class="navC mb10">
+      <ul>
+        <li><a href="#" hidefocus="true">系统设置1</a></li>
+        <li><a href="#" hidefocus="true">系统设置2</a></li>
+        <li class="current"><a href="#" hidefocus="true">系统设置3</a></li>
+        <li><a href="#" hidefocus="true">系统设置4</a></li>
+        <li><a href="#" hidefocus="true">系统设置5</a></li>
+      </ul>
+    </div>
+    <div class="mb20">
+      <table class="tdtable">
+        <tbody>
+          <tr>
+            <th>
+              <strong>留言薄</strong>编号
+            </th>
+            <th>
+              手机号码
+            </th>
+            <th>
+              留言时间
+            </th>
+            <th>
+              留言
+            </th>
+            <th>
+              操作
+            </th>
+          </tr>
+          <tr>
+            <td>
+              1
+            </td>
+            <td>
+              13638688356
+            </td>
+            <td>
+
+            </td>
+            <td>
+              意见内容意见内容意见内容
+            </td>
+            <td>
+              <a href="message-board!delete.action?id=1&amp;msgType=" class="del">删除</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2
+            </td>
+            <td>
+              13638688356
+            </td>
+            <td>
+
+            </td>
+            <td>
+              意见内容意见内容意见内容
+            </td>
+            <td>
+              <a href="message-board!delete.action?id=2&amp;msgType=" class="del">删除</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              8
+            </td>
+            <td>
+              13638688356
+            </td>
+            <td>
+
+            </td>
+            <td>
+              我爱你，就象老鼠爱大米11
+            </td>
+            <td>
+              <a href="message-board!delete.action?id=8&amp;msgType=" class="del">删除</a>
+            </td>
+          </tr>
+          <tr>
+            <td bgcolor="#fafafa" align="right" colspan="6">
+              <div id="footer">
+                第1页, 共1页
+                <a href="javascript:jumpPage(1)">首页</a>
+
+
+                <a href="javascript:jumpPage(1)">末页</a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</body>
+
+</html>
