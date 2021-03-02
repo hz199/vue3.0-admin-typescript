@@ -18,7 +18,7 @@
     </el-aside>
 
     <el-container class="right-container">
-      <el-header class="header clearfix" style="box-shadow: 0 4px 10px 0 rgba(44, 51, 73, 0.1);">
+      <el-header class="header clearfix">
         <HeaderContent></HeaderContent>
       </el-header>
       <!-- <div>11</div> -->

@@ -5,25 +5,25 @@ export default {
       icon: 'el-icon-eleme',
       title: '访问量',
       count: parseInt(Math.random() * 10000 + ''),
-      color: 'rgb(242, 121, 153)'
+      color: '#138eff'
     },
     {
       icon: 'el-icon-chat-line-square',
       title: '信息量',
       count: parseInt(Math.random() * 10000 + ''),
-      color: 'rgb(121, 189, 242)'
+      color: '#ff2936'
     },
     {
       icon: 'el-icon-shopping-cart-full',
       title: '销售金额',
       count: parseInt(Math.random() * 10000 + ''),
-      color: 'rgb(224, 242, 121)'
+      color: '#5a62b3'
     },
     {
       icon: 'el-icon-goblet-square-full',
       title: '其他',
       count: parseInt(Math.random() * 10000 + ''),
-      color: 'rgb(224, 121, 242)'
+      color: '#16d194'
     }
   ]
 }
