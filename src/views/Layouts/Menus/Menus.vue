@@ -101,32 +101,6 @@ export default defineComponent({
 $menu-hover-color: #40a0ff7e;
 $menu-font-color: rgb(224, 221, 221);
 
-[theme="dark"] {
-  .el-aside, .el-menu {
-    background-color: rgb(81, 90, 110);
-  }
-  .el-menu-item , .el-submenu__title{
-    color: $menu-font-color;
-  }
-
-  .el-menu-item.is-active {
-    color: $menu-font-color;
-    background-color: $menu-hover-color;
-  }
-  .el-menu-item:focus, .el-menu-item:hover {
-    outline: 0;
-    background-color: $menu-hover-color;
-  }
-  .el-submenu__title:hover {
-    background-color: $menu-hover-color;
-  }
-
-  .el-submenu__title:focus, .el-submenu__title:hover {
-    outline: 0;
-    background-color: $menu-hover-color;
-  }
-}
-
 .el-popper.is-dark {
 	background-color: rgba(0, 0, 0, 0.8);
 	color: #fff;

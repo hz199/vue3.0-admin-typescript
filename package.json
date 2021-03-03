@@ -9,8 +9,10 @@
     "sh": "bash deploy.sh"
   },
   "dependencies": {
+    "@ant-design/colors": "^6.0.0",
     "core-js": "3.6.5",
     "countup.js": "^2.0.7",
+    "css-vars-ponyfill": "^2.4.3",
     "element-plus": "^1.0.2-beta.32",
     "lodash": "^4.17.20",
     "nprogress": "^0.2.0",
