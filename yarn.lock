@@ -1813,10 +1813,10 @@
   resolved "https://registry.npmjs.org/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@yyr1994/h-charts@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.npmjs.org/@yyr1994/h-charts/-/h-charts-0.1.3.tgz#01d6e12de873fb6e57d5b6ef1371bb3dba5b4edb"
-  integrity sha512-hDxlPZWcMoeCTfTACeLKVAPSoWfNffQVB29VjhCmaVnZiY8yGIXRRGr1JP9L1i+2pbEnhmLtOpTHALS/SzvyJQ==
+"@yyr1994/h-charts@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/@yyr1994/h-charts/-/h-charts-0.1.4.tgz#83b1ffccfd79f40947ff82260597a7334f610c87"
+  integrity sha512-PjmQXt+8yEn8B7fbcpVL5ruzP21GjY9i/CXyxUX+zPRMS0aebTO1HPJQOxzOajEHeX3o8Y8WFJ4YKEeliqqAOw==
   dependencies:
     echarts "^5.0.2"
     echarts-wordcloud "^2.0.0"
@@ -2946,6 +2946,11 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
   dependencies:
     delayed-stream "~1.0.0"
+
+commander@*:
+  version "7.1.0"
+  resolved "https://registry.npmjs.org/commander/-/commander-7.1.0.tgz#f2eaecf131f10e36e07d894698226e36ae0eb5ff"
+  integrity sha512-pRxBna3MJe6HKnBGsDyMv8ETbptw3axEdYHoqNh7gu5oDcew8fs0xnivZGm06Ogk8zGAJ9VX+OPEr2GXEQK4dg==
 
 commander@2.17.x:
   version "2.17.1"
@@ -6229,6 +6234,13 @@ mixin-deep@^1.2.0:
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
   dependencies:
     minimist "^1.2.5"
+
+mockjs@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/mockjs/-/mockjs-1.1.0.tgz#e6a0c378e91906dbaff20911cc0273b3c7d75b06"
+  integrity sha512-eQsKcWzIaZzEZ07NuEyO4Nw65g0hdWAyurVol1IPl1gahRwY+svqzfgfey8U8dahLwG44d6/RwEzuK52rSa/JQ==
+  dependencies:
+    commander "*"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
