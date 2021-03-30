@@ -4,10 +4,10 @@
       <i class="el-icon-s-unfold" @click="handleSliderCollapse" v-if="getSliderCollapse"></i>
       <i class="el-icon-s-fold" @click="handleSliderCollapse" v-else></i>
     </div>
-    <Breadcrumb></Breadcrumb>
+    <Breadcrumb/>
   </div>
   <div class="pull-right header-right">
-    <HeaderFullScreen></HeaderFullScreen>
+    <HeaderFullScreen/>
 
     <el-dropdown size="small" trigger="click" class="dropdown-height-right">
       <span class="avatar">
