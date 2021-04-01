@@ -63,7 +63,7 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-@import '@/vars.scss';
+@import '@/styles/vars.scss';
 
 .header-right, .header-left {
   height: 100%;

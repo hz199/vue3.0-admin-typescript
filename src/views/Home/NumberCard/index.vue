@@ -36,17 +36,16 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-@import '@/vars.scss';
+@import '@/styles/mixin.scss';
 
 .numberCard {
+  @include white-bg-border;
+
   cursor: pointer;
   height: 80px;
   display: flex;
-  background-color: #fff;
-  border-radius: $h--border-radius;
   padding: 16px 28px;
   margin-bottom: 5px;
-  border: $h--border-width solid #e4e9f2;
   .iconWarp {
     font-size: 50px;
     vertical-align: middle;

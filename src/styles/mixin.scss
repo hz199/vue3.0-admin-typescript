@@ -1,0 +1,7 @@
+@import './vars.scss';
+
+@mixin white-bg-border {
+  background-color: #fff;
+  border-radius: $h--border-radius;
+  border: $h--border-width solid #e4e9f2;
+}

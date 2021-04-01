@@ -10,9 +10,14 @@
         ></NumberCard>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col :xs="24" :lg="18">
-        <HHistogram :dataSource="dataSource" ariaShow></HHistogram>
+    <el-row style="margin-top: 10px;">
+      <el-col :xs="24" :lg="16">
+        <HHistogram class="chart-wrapper" :dataSource="dataSource" ariaShow></HHistogram>
+      </el-col>
+      <el-col :xs="24" :lg="8">
+        <div class="chart-right">
+          3
+        </div>
       </el-col>
     </el-row>
   </div>
@@ -41,3 +46,18 @@ export default defineComponent({
   }
 })
 </script>
+<style lang="scss" scoped>
+@import '@/styles/mixin.scss';
+
+.chart-wrapper {
+  @include white-bg-border;
+  
+}
+.chart-right {
+  height: 400px;
+  @include white-bg-border;
+  margin-left: 10px;
+  padding: 5px;
+}
+</style>
+

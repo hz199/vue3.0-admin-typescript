@@ -96,7 +96,7 @@ export default defineComponent({
 })
 </script>
 <style lang="scss" scoped>
-@import '@/vars.scss';
+@import '@/styles/vars.scss';
 
 .layout {
   .footer {

@@ -57,7 +57,7 @@ export default defineComponent({
 </script>
 <style lang="scss">
 $tag-size: 28px;
-@import '../../../vars';
+@import '@/styles/vars';
 
 // tag
 .nav-tag {
